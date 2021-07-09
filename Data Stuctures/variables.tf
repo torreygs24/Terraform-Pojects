@@ -28,8 +28,6 @@ variable "pi_tuple" {
 
 #example of the tuple
 variable "example_tuple" {
-  type = tuple([
-   ["a", 15, true]
-   ]
-  )
+  type = tuple([string, number, bool])
+  default = ["a", 15, true]
 }
