@@ -8,26 +8,22 @@ variable "network_info" {
       subnet_mask  = number
       nat_enabled  = bool
 
-    }
-  )
+  })
+  default = {
+    #Example of Object
+    network_name = "my_net"
+    cidr_ranges  = ["10.0.0.0/24", "10.0.1.0/24"]
+    subnet_count = 2
+    subnet_mask  = 25
+    nat_enabled  = false
+  }
 }
-#Example of Object
-network_name = "my_net"
-cidr_ranges  = ["10.0.0.0/24", "10.0.1.0/24"]
-subnet_count = 2
-subnet_mask  = 25
-nat_enabled  = false
 
 
 #Tuple - Similar in nature to a list, it is an indexed set of values where each value can be of a diff type
-variable "pi_tuple" {
-  type = tuple( #A tuple with four types
-    [string, number, bool, list(number)]
-  )
-}
 
 #example of the tuple
 variable "example_tuple" {
-  type = tuple([string, number, bool])
+  type    = tuple([string, number, bool])
   default = ["a", 15, true]
 }
