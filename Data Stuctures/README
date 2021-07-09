@@ -1,1 +1,3 @@
 These are examples of Data Structure Types for studying purposes. 
+The Main.tf file shows Primitive and Collection types.
+The Variables.tf file shows Structural Types.
