@@ -1,7 +1,0 @@
----
-- hosts: localhost
-  tasks:
-    - name: Create S3 bucket
-      s3_bucket:
-        name: jenkins-terraform214
-        state: present
